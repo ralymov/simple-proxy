@@ -8,7 +8,7 @@ const app = express();
 // Configuration
 const PORT = 443;
 const HOST = "localhost";
-const API_SERVICE_URL = "localhost";
+const API_SERVICE_URL = "http://154.38.160.231";
 
 // Logging
 app.use(morgan('dev'));
@@ -17,15 +17,6 @@ app.use(morgan('dev'));
 app.get('/info', (req, res, next) => {
     res.send('This is a proxy service.');
 });
-
-// Authorization
-// app.use('', (req, res, next) => {
-//     if (req.headers.authorization) {
-//         next();
-//     } else {
-//         res.sendStatus(403);
-//     }
-// });
 
 // Proxy endpoints
 app.use('/rpc/haqq', createProxyMiddleware({
