@@ -6,7 +6,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
 // Configuration
-const PORT = 443;
+const PORT = 3000;
 const HOST = "localhost";
 const API_SERVICE_URL = "http://154.38.160.231";
 
